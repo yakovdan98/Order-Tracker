@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using OrderTracker.Models;
+
+<h1>@Model.Name</h1>
+
+@if (@Model.Orders.Count == 0)
+{
+  <h3>No orderes have been added</h3>
+}
+@foreach (Order order in Model.Orders)
+{
+  <h2>@order.Title</h2>
+  <h3>@order.Description</h3>
+  <h3>@order.Price</h3>
+  <h3>@order.Date</h3> 
+}
+<h3><a href='/vendors'>View Vendors</a></h3>

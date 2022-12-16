@@ -5,11 +5,11 @@ namespace OrderTracker.Models
   {
     public string Title { get; set; }
     public string Description { get; set; }
-    public int Price { get; set; }
+    public double Price { get; set; }
     public string Date { get; set; }
 
 
-    public Order(string title, string description, int price, string date)
+    public Order(string title, string description, double price, string date)
     {
       Title = title;
       Description = description;

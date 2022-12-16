@@ -12,10 +12,11 @@
 }
 @foreach (Order order in Model.Orders)
 {
-  <h2>@order.Title</h2>
-  <h3>@order.Description</h3>
-  <h3>@order.Price</h3>
-  <h3>@order.Date</h3> 
+  <h2>Title: @order.Title</h2>
+  <h3>Description: @order.Description</h3>
+  <h3>Price: $@order.Price</h3>
+  <h3>Date: @order.Date</h3> 
+  <hr>
 }
 <h3><a href='/vendors/@Model.Id/orders/new'>Add new order to @Model.Name</a></h3>
 <h3><a href='/vendors'>View Vendors</a></h3>

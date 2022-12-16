@@ -32,5 +32,13 @@ namespace OrderTracker.Controllers
     {
       return View(Vendor.Find(id));
     }
+
+    [HttpPost("/vendors/{id}/orders")]
+    public ActionResult Create(int id, string title, string desc, double price, string date)
+    {
+      Order order = new Order(title, desc, price, date);
+      Vendor.Find(id).AddOrder(order);
+      return View("Show", Vendor.Find(id));
+    }
   }
 }

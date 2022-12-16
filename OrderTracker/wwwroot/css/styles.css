@@ -1,0 +1,24 @@
+.jumbotron {
+  margin: 0;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: rgb(198, 155, 122);
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-weight:700;
+  color: white;
+}
+
+.jumbotron p {
+  font-weight: 700;
+  color: white;
+}
+
+.header-bakery {
+  background: url("https://thumbs.dreamstime.com/b/bakery-bread-wood-background-closeup-variety-baked-food-wooden-table-high-resolution-119166489.jpg");
+  background-position: 0 -100px;
+  background-size: cover;
+  height: 20vh;
+}

@@ -1,9 +1,8 @@
-ines (23 sloc)  619 Bytes
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ToDoList
+namespace OrderTracker
 {
   class Program
   {

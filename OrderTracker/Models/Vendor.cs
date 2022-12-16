@@ -31,11 +31,17 @@ namespace OrderTracker.Models
       {
         if(item.Id == Id) {return item;}
       }
+      return null;
     }
 
     public void AddOrder(Order order)
     {
       Orders.Add(order);
+    }
+
+    public static void Clear()
+    {
+      _instances.Clear();
     }
   }
 }

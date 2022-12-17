@@ -17,7 +17,7 @@ namespace OrderTracker.Controllers
     [HttpGet("/vendors/new")]
     public ActionResult New()
     {
-      return View();
+      return View(); 
     }
 
     [HttpPost("/vendors")]

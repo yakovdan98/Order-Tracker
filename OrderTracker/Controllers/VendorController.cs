@@ -40,5 +40,12 @@ namespace OrderTracker.Controllers
       Vendor.Find(id).AddOrder(order);
       return View("Show", Vendor.Find(id));
     }
+
+    [HttpPost("/vendors/{id}/delete")]
+    public ActionResult Delete(int id)
+    {
+      Vendor.Delete(id);
+      return RedirectToAction("Index");
+    }
   }
 }

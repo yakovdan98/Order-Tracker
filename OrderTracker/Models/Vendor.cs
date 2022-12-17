@@ -5,7 +5,7 @@ namespace OrderTracker.Models
   public class Vendor
   {
     private static List<Vendor> _instances = new List<Vendor> { };
-    private int createdId = 0;
+    private static int createdId = 0;
     public int Id { get; }
     public string Name { get; set; }
     public string Description { get; set; }
@@ -15,8 +15,9 @@ namespace OrderTracker.Models
     {
       Name = name;
       Description = description;
-      Id = ++createdId;
-      Orders = new List<Order>{};
+      createdId++;
+      Id = createdId;
+      Orders = new List<Order> { };
       _instances.Add(this);
     }
 
@@ -29,7 +30,10 @@ namespace OrderTracker.Models
     {
       foreach (Vendor item in _instances)
       {
-        if(item.Id == Id) {return item;}
+        if (item.Id == Id)
+        {
+          return item;
+        }
       }
       return null;
     }
@@ -42,6 +46,18 @@ namespace OrderTracker.Models
     public static void Clear()
     {
       _instances.Clear();
+      createdId = 0;
+    }
+
+    public static void Delete(int id)
+    {
+      for (int i = 0; i < _instances.Count; i++)
+      {
+        if (_instances[i].Id == id)
+        {
+          _instances.RemoveAt(i);
+        }
+      }
     }
   }
 }
